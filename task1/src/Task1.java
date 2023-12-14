@@ -5,18 +5,18 @@ public class Task1 {
     public static void main(String[] args) {
         long ipInt =  new Scanner(System.in).nextLong();
 
-        // Преобразование int32 обратно в строку
+        // Преобразование int32  в IPv4
         String ipAddress = integerToIp(ipInt);
         System.out.println("Int32 в IPv4: " + ipAddress);
 
-        // Преобразование строки в int32
+        // Преобразование IPv4 в int32
         ipInt = ipToInteger(ipAddress);
         System.out.println("IPv4 в int32: " + ipInt);
 
 
     }
 
-    // Функция преобразования строки IPv4 в int32
+    // Функция преобразования  IPv4 в int32
     public static long ipToInteger(String ipAddress) {
         String[] octets = ipAddress.split("\\.");
 
@@ -36,7 +36,7 @@ public class Task1 {
         return result;
     }
 
-    // Функция преобразования int32 в строку IPv4
+    // Функция преобразования int32 в  IPv4
     public static String integerToIp(long ipInt) {
         StringBuilder ipAddress = new StringBuilder();
         for (int i = 0; i < 4; i++) {
